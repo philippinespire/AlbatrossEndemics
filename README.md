@@ -1,5 +1,5 @@
 # AlbatrossEndemics
-Analysis to find fishes endemic to the Philippines that were described the Albatross Expedition
+Analysis to find fishes endemic to the Philippines that were described by the Albatross Expedition
 
 Use the checklist of Albatross holotypes from the appendix of [Balisco & Liao 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12305098/)
 and the list of Philippine endemics from their Supplementary Table 1.
