@@ -52,3 +52,11 @@ Albatross_endemics <- endemics$sppname[Albatross_endemic_lines] # list of the sp
 
 ## Write out
 write.csv(endemics[Albatross_endemic_lines, c("Original.ScientificName", "ValidAs.Remarks", "sppname")], file = "Albatross_endemics.csv", row.names = FALSE)
+
+
+## Bonus: find senior synonyms described by the Albatross (remove junior synonmyms)
+validspptomatch <- gsub(" ", "", status$sppname[status$ValidAs.Remarks == ""])
+pattern <- paste(out$species, collapse = "|") # long search pattern of all Albatross holotypes
+Albatross_valid_lines <- grepl(pattern, validspptomatch, ignore.case = TRUE) # find entries in validspptomatch that are Albatross holotypes
+
+sum(Albatross_valid_lines) # finds 117 species
